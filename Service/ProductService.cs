@@ -116,7 +116,7 @@ namespace Service
 
         public List<ViewProduct> UpdateProduct(ViewProduct product)
         {
-            List<ViewProduct> response = new();
+            List<ViewProduct> response = new List<ViewProduct>();
             var updateModel = _mapper.Map<DAL.Entities.Product>(product);
             updateModel.PriceTl = updateModel.Price * updateModel.ExchangeTl;
 
